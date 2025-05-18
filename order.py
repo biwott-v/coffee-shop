@@ -12,3 +12,13 @@ class Order(Customer,Coffee):
             self._price = price
         else :
             return "Invalid price (Price should be between 1 and 10"
+    price = property(get_name,set_name)
+    def customer():
+        return self._name
+    def coffee():
+        return self._coffee_name
+    def __str__(self):
+        return "This is the Order"
+        
+
+        
