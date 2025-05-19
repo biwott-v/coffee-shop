@@ -1,4 +1,5 @@
-from order import all_customers
+#from order import all_customers
+#from order import Order
 class Customer:
     def __init__(name,self):
         self._name=name
@@ -13,6 +14,8 @@ class Customer:
     name = property(set_name,get_name)
     def coffee(name):
         return all_customers[name]
+    def create_order(price,coffee):
+        pass
 
 
 

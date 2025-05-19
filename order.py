@@ -1,5 +1,5 @@
 from customer import Customer
-from coffee import Coffee 
+from coffee import Coffee
 
 class Order(Customer,Coffee):
     all_coffee,temp_coffee=[],[]
@@ -25,8 +25,10 @@ class Order(Customer,Coffee):
         if price <10 and price >1:
             self._price = price
         else :
-            return "Invalid price (Price should be between 1 and 10"
-    price = property(get_name,set_name)
+            raise ValueError "Name must be between 1 and 15 characters"
+    def get_price():
+        return self._price
+    price = property(get_price,set_price)
     def customer():
         return self._name
     def coffee():
@@ -35,3 +37,4 @@ class Order(Customer,Coffee):
         return "This is the Order"
         
 
+victor = Order("name")
