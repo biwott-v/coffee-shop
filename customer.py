@@ -21,6 +21,3 @@ class Customer:
     def create_order(self):
         from order import Order
 
-
-if __name__ == "__main__":
-    
