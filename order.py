@@ -4,10 +4,14 @@ from coffee import Coffee
 class Order(Customer,Coffee):
     all_coffee,temp_coffee=[],[]
     all_customers={}
-    def __init__(self,price ):
+    def __init__(self,name,coffee_name):
         Customer.__init__(self,name)
         Coffee.__init__(self,coffee_name)
-        self._price = price
+        price = float(input("Enter the price  "))
+        if price <10 and price >1:
+            self._price = price
+        else :
+            raise ValueError ("Name must be between 1 and 15 characters")
         all_coffee.append(self)
         try:
             temp_coffee=all_customers[self._name]
@@ -25,7 +29,7 @@ class Order(Customer,Coffee):
         if price <10 and price >1:
             self._price = price
         else :
-            raise ValueError "Name must be between 1 and 15 characters"
+            raise ValueError ("Name must be between 1 and 15 characters")
     def get_price():
         return self._price
     price = property(get_price,set_price)
@@ -37,4 +41,4 @@ class Order(Customer,Coffee):
         return "This is the Order"
         
 
-victor = Order("name")
+victor = Order(4,"victor","latte")
