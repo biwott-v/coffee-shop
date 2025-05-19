@@ -14,4 +14,7 @@ class Coffee:
     def order():
         return all_coffee
     def customer():
-        return all_customers
+        customers
+        for customer in all_customers.keys():
+            customers.append(customer)
+        return customers
