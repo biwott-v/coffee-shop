@@ -15,15 +15,12 @@ class Customer:
     def get_name(self):
         return self._name
     name = property(get_name,set_name)
-    def coffee(self):
+    def coffee(name):
         from order import Order
-        return Order.all_customers[self._name]
+        return Order.all_customers[name]
     def create_order(self):
         from order import Order
-        print("kindly enter your name another time for confirmation")
-        new_order = Order()
 
 
 if __name__ == "__main__":
-    me= Customer()
-    me.create_order()
+    

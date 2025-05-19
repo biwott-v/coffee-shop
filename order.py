@@ -41,5 +41,3 @@ class Order(Customer,Coffee):
         return "{0} ordered {1} which costs {2}".format(self._name,self._coffee_name,self._price)
         
 
-victor = Order()
-print(victor)
