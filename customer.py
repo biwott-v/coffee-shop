@@ -11,4 +11,3 @@ class Customer:
         return self._name
     name = property(set_name,get_name)
 
-victor = Customer("victor")

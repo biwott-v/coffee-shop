@@ -1,3 +1,4 @@
+from order import all_cofee,all_customers
 class Coffee:
     def __init__(self,coffee_name):
         self._coffee_name=coffee_name
@@ -10,3 +11,7 @@ class Coffee:
     def get_coffee_name():
         return self._coffee_name
     coffee_name = property(get_coffee_name,set_coffee_name)
+    def order():
+        return all_coffee
+    def customer():
+        return all_customers

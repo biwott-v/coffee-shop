@@ -1,11 +1,15 @@
-from customer.py import Customer
-from coffee.py import Coffee 
+from customer import Customer
+from coffee import Coffee 
 
 class Order(Customer,Coffee):
+    all_coffee=[]
+    all_customers={}
     def __init__(self,price ):
         Customer.__init__(self,name)
         Coffee.__init__(self,coffee_name)
         self._price = price
+        all_coffee.append(self)
+        all_customers.add(self._name)
     def set_price(self,price):
         price = float(input("Enter the price  "))
         if price <10 and price >1:
@@ -21,4 +25,3 @@ class Order(Customer,Coffee):
         return "This is the Order"
         
 
-        
